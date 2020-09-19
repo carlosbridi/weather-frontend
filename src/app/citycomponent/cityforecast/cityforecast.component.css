@@ -1,0 +1,15 @@
+.text {
+    width: 33.3%;
+    float: right;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif 
+}
+
+.text_center {
+    text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}

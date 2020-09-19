@@ -1,0 +1,30 @@
+<div class="col-6">
+  <div style="margin-left: 20px; margin-top: 25px;">
+    <div class="col-8 ui-fluid">
+      <form [formGroup]="formGroup" novalidate>
+        
+          <div style="margin-left: 5px;">
+            <label>City name: </label>
+          </div>
+          <div class="col-8">
+            <input type="text" pInputText size="30" formControlName="nameCity" name="nameCity"/>
+          </div>
+          <div style="margin-left: 5px;">
+            <label>Country name: </label>
+          </div>
+        <div class="col-8">  
+          <input type="text" pInputText size="30" formControlName="countryCity" name="nameCity"/>
+        </div>
+        <div class="row" style="align-items: center; margin: auto; margin-top: 5px;">
+          <div>
+            <button type="button" class="btn btn-link" (click)="cancelarRegister()">Cancel</button>
+          </div>
+          <div>
+            <button type="button" class="btn btn-primary" (click)="registerCity()">Add city</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <p-toast position="bottom-center"></p-toast>
+  </div>
+</div>
