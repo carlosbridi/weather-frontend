@@ -20,7 +20,6 @@ export class ListcityComponent {
 
     ngOnInit() {
         this.appService.getCities().subscribe((cities: City[]) => {
-          console.log(cities);
           this.cities = cities;
         });
 

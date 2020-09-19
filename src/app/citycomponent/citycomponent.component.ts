@@ -18,12 +18,10 @@ export class CitycomponentComponent implements OnInit {
 
   ngOnInit(): void {
     this.routeSub = this.route.params.subscribe(params => {
-      console.log(params) //log the entire params object
-
+      
       this.cityService.getCityWeather(params.cityId).subscribe((city: any) => {
         this.cityData = city.city
         city.list.forEach(element => {
-          console.log(element);
           this.forecasts.push(element);
         });
       });
