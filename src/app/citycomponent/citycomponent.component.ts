@@ -44,7 +44,6 @@ export class CitycomponentComponent implements OnInit {
             this.daysOfForecast.push({date: element.date, temp_max : 0, temp_min : 100, weather: [element]});
           }
         });
-        this.daysOfForecast.pop();
       });
     });
   }
