@@ -34,6 +34,9 @@ export class CitycomponentComponent implements OnInit {
             if (element.dt_txt.includes("12:00:00")){
               dateElement['temp'] = element.main.temp;
               dateElement['description'] = element.weather[0].description
+            } else {
+              dateElement['temp'] = element.main.temp;
+              dateElement['description'] = element.weather[0].description
             }
 
             if (element.main.temp_max > dateElement['temp_max'])

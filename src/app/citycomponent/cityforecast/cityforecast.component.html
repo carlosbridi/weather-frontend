@@ -8,7 +8,8 @@
    <div class="grid-container">
     <div class="grid-child text_center">
       <img src="/assets/cloud-solid.svg" *ngIf="cityForecastDay.description == 'nublado'" style="width: 15px; height: 15px" alt="image">
-      <img src="/assets/cloud-solid.svg" *ngIf="cityForecastDay.description == 'chuva leve'" style="width: 15px; height: 15px" alt="image">
+      <img src="/assets/cloud-solid.svg" *ngIf="cityForecastDay.description == 'algumas nuvens'" style="width: 15px; height: 15px" alt="image">
+      <img src="/assets/cloud-rain-solid.svg" *ngIf="cityForecastDay.description == 'chuva leve'" style="width: 15px; height: 15px" alt="image">
       <img src="/assets/sun-regular.svg" *ngIf="cityForecastDay.description == 'céu limpo'" style="width: 15px; height: 15px" alt="image">
       <img src="/assets/cloud-sun-solid.svg" *ngIf="cityForecastDay.description == 'nuvens dispersas'" style="width: 15px; height: 15px" alt="image">
       {{cityForecastDay.description}}
