@@ -1,8 +1,8 @@
 <p-panel header="{{cityData.name}}">
     <div class="col-12">
         <div class="row">
-            <section style="margin-top: 5px; float:left"  *ngFor="let forecast of forecasts" layout-wrap>
-                <cityforecast [cityForecastDay]="forecast"></cityforecast>
+            <section style="margin-top: 5px; float:left"  *ngFor="let dayInfo of daysOfForecast" layout-wrap>
+                <cityforecast [cityForecastDay]="dayInfo"></cityforecast>
             </section>
         </div>
     </div>
