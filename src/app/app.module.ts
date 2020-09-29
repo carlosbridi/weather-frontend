@@ -22,6 +22,7 @@ import { CityFormService } from './form-city/cityform.service';
 import { MessagesModule } from 'primeng/messages';
 import { MessageModule } from 'primeng/message';
 import { ToastModule } from 'primeng/toast';
+import {TabViewModule} from 'primeng/tabview';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { ToastModule } from 'primeng/toast';
     MessagesModule,
     MessageModule,
     ToastModule,
+    TabViewModule,
     appRoutingModule
   ],
   providers: [ AppService, CityService, CityFormService ],

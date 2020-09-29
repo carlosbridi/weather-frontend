@@ -18,6 +18,7 @@ export class CitycomponentComponent implements OnInit {
   public cityData: any = {};
 
   public daysOfForecast: any[] = [];
+  public loadData: boolean = false;
 
   ngOnInit(): void {
     this.routeSub = this.route.params.subscribe(params => {
@@ -42,13 +43,14 @@ export class CitycomponentComponent implements OnInit {
             if (element.main.temp_max > dateElement['temp_max'])
               dateElement['temp_max'] = element.main.temp_max;
             if (element.main.temp_min < dateElement['temp_min'])
-              dateElement['temp_min'] = element.main.temp_min;               
+              dateElement['temp_min'] = element.main.temp_min;              
           } else {
             this.daysOfForecast.push({date: element.date, temp_max : 0, temp_min : 100, weather: [element]});
           }
-        });
+        }); 
+        if (this.daysOfForecast.length > 5) this.daysOfForecast.pop();       
+        this.loadData = true;
       });
     });
   }
-
 }

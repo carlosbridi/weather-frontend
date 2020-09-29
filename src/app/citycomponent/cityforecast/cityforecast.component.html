@@ -1,32 +1,30 @@
 <p-card>
-   <p-header>
-     <div class="text_center">
-       <img src="/assets/calendar-alt-regular.svg" style="width: 15px; height: 15px" alt="image">
-       {{cityForecastDay.date}}
-     </div>
-   </p-header>
-   <div class="grid-container">
-    <div class="grid-child text_center">
-      <img src="/assets/cloud-solid.svg" *ngIf="cityForecastDay.description == 'nublado'" style="width: 15px; height: 15px" alt="image">
-      <img src="/assets/cloud-solid.svg" *ngIf="cityForecastDay.description == 'algumas nuvens'" style="width: 15px; height: 15px" alt="image">
-      <img src="/assets/cloud-rain-solid.svg" *ngIf="cityForecastDay.description == 'chuva leve'" style="width: 15px; height: 15px" alt="image">
-      <img src="/assets/sun-regular.svg" *ngIf="cityForecastDay.description == 'céu limpo'" style="width: 15px; height: 15px" alt="image">
-      <img src="/assets/cloud-sun-solid.svg" *ngIf="cityForecastDay.description == 'nuvens dispersas'" style="width: 15px; height: 15px" alt="image">
-      {{cityForecastDay.description}}
+  <div class="row">
+    <div class="column">
+      <div class="grid-child text_center">
+        <img src="/assets/cloud-solid.svg" *ngIf="cityForecastDay.description == 'nublado'" style="width: 15px; height: 15px" alt="image">
+        <img src="/assets/cloud-solid.svg" *ngIf="cityForecastDay.description == 'algumas nuvens'" style="width: 15px; height: 15px" alt="image">
+        <img src="/assets/cloud-rain-solid.svg" *ngIf="cityForecastDay.description == 'chuva leve'" style="width: 15px; height: 15px" alt="image">
+        <img src="/assets/sun-regular.svg" *ngIf="cityForecastDay.description == 'céu limpo'" style="width: 15px; height: 15px" alt="image">
+        <img src="/assets/cloud-sun-solid.svg" *ngIf="cityForecastDay.description == 'nuvens dispersas'" style="width: 15px; height: 15px" alt="image">
+        {{cityForecastDay.description}}
+      </div>
+      <div class="grid-child text_center">
+        {{cityForecastDay.temp}}°C
+      </div>
+      <i class='fas fa-temperature-high'></i>
     </div>
-    <div class="grid-child text_center">
-      {{cityForecastDay.temp}}°C
+    <div class="column">
+      <div class="row">
+        <div class="grid-child text_center" style="color: blue;">
+          <img src="/assets/temperature-low-solid.svg" style="width: 15px; height: 15px" alt="image"> {{cityForecastDay.temp_min}}°C
+        </div>        
+      </div>
+      <div class="row">
+        <div class="grid-child text_center" style="color: red;">
+          <img src="/assets/temperature-high-solid.svg" style="width: 15px; height: 15px" alt="image"> {{cityForecastDay.temp_max}}°C
+        </div>
+      </div>
     </div>
-    <i class='fas fa-temperature-high'></i>
   </div>
-   <p-footer>
-    <div class="grid-container">
-      <div class="grid-child text_center" style="color: blue;">
-        <img src="/assets/temperature-low-solid.svg" style="width: 15px; height: 15px" alt="image"> {{cityForecastDay.temp_min}}°C
-      </div>
-      <div class="grid-child text_center" style="color: red;">
-        <img src="/assets/temperature-high-solid.svg" style="width: 15px; height: 15px" alt="image"> {{cityForecastDay.temp_max}}°C
-      </div>
-    </div>
-  </p-footer>
  </p-card>

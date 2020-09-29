@@ -1,9 +1,11 @@
-<p-panel header="{{cityData.name}}">
-    <div class="col-12">
+<div class="col-6">
+    <p-panel header="{{cityData.name}}">
         <div class="row">
-            <section style="margin-top: 5px; float:left"  *ngFor="let dayInfo of daysOfForecast" layout-wrap>
-                <cityforecast [cityForecastDay]="dayInfo"></cityforecast>
-            </section>
+            <p-tabView *ngIf="loadData" [activeIndex]="index">
+                <p-tabPanel [header]="dayInfo.date" *ngFor="let dayInfo of daysOfForecast" [selected]="i == 0">
+                    <cityforecast [cityForecastDay]="dayInfo"></cityforecast>
+                </p-tabPanel>
+            </p-tabView>
         </div>
-    </div>
-</p-panel>
+    </p-panel>
+</div>
